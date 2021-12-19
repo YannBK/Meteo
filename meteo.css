@@ -1,0 +1,150 @@
+body{
+    background-color: lightsteelblue;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    margin:0;
+    padding: 0;
+    padding-left: 10px;
+}
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    top: 0;
+    color:aliceblue;
+    width: 100vw;
+    height: 80px;
+    background-color: #333;
+    z-index: 10;
+}
+#ok{
+    cursor: pointer;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 50%;
+    margin-left: 100px;
+}
+form input{
+    margin : 0 20px;
+    height: 30px;
+}
+form input[type="text"]{
+    border-radius: 5px;
+}
+form input[type="text"]:focus{
+    background-color: #ddd;
+}
+p{
+    padding: 0;;
+    margin:0;
+    line-height: 1.5rem;
+}
+.div{
+    border: 1px solid rgb(42, 93, 158);
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: rgb(126, 170, 226);
+}
+#display{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.apparait {
+    animation : 1s apparition ease-out forwards, 1s vientduhaut ease-out forwards;
+}
+@keyframes apparition {
+    0% {
+        opacity : 0;
+        transform: scale(0.1);
+    }
+    75%{
+        opacity: 0.4;
+    }
+    100% {
+        opacity : 0.9;
+        transform: scale(1);
+    }
+}
+@keyframes vientduhaut {
+    from {
+        transform: translateY(-1000px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+
+}
+.titre{
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+}
+.jour{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.actuelle{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+.divp{
+    margin-left: 20px;
+}
+.heure{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: 20px 5vw;
+    animation : 1s apparition ease-out forwards;
+}
+.petitjour {
+    width: 100%;
+}
+.cliquer{
+    border-radius: 10px;
+    line-height: 1.5rem;
+    background-color: rgb(154, 239, 241);
+}
+.cliquer:hover{
+    background-color: rgb(54, 213, 216);
+}
+.petitediv{
+    border : 1px solid rgb(42, 93, 158);
+    min-width : 150px;
+    max-width : 150px;
+    min-height : 150px;
+    padding: 50px 10px 0 10px;
+}
+@media screen and (max-width:900px){
+    .actuelle{
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    form input{
+        margin : 0 10px;
+        width: 100px;
+    }
+    form{
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+}
